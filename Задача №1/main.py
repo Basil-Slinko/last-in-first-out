@@ -1,7 +1,7 @@
 class Stack:
 
-    def __init__(self, stack):
-        self.stack = stack
+    def __init__(self):
+        self.stack = list()
 
     def is_empty(self):
         return bool(self.stack)
@@ -10,8 +10,9 @@ class Stack:
         self.stack.append(element)
 
     def pop(self):
+        result = self.stack[-1]
         self.stack.pop()
-        return self.stack[-1]
+        return result
 
     def peek(self):
         return self.stack[-1]
